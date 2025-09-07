@@ -1,7 +1,7 @@
 const range = document.getElementById("progress");
 const playButton = document.getElementById("play-button");
 const song = document.getElementById("audio");
-
+const playIcon = document.querySelector("#play-button i")
 
 song.onloadedmetadata = function() {
     range.max = song.duration;
@@ -9,14 +9,15 @@ song.onloadedmetadata = function() {
 }
 
 const playPause = () => {
-    if(playButton.classList.contains("fa-pause")){
+    if(playIcon.classList.contains("fa-pause")){
         song.pause();
-        playButton.classList.add("fa-play");
-        playButton.classList.remove("fa-pause");
+        playIcon.classList.add("fa-play");
+        playIcon.classList.remove("fa-pause");
     }else{
         song.play();
-        playButton.classList.add("fa-pause");
-        playButton.classList.remove("fa-play");
+        playIcon.classList.remove("fa-play");
+        playIcon.classList.add("fa-pause");
+        
     }
 }
 
