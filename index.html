@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://kit.fontawesome.com/0e58feae42.js" crossorigin="anonymous"></script>
+    <title>Music Player</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <i class="fa-solid fa-arrow-left"></i>
+            <i class="fa-solid fa-bars"></i>
+        </nav>
+        <div class="inner-container">
+            <img src="./assets/468-thumbnail.png">
+            <h1>Despacito</h1>
+            <p>Luis fansi ft. Puarto rikan </p>
+
+            <audio id="audio" controls>
+                <source src="./assets/Kanye West - Runaway.mp3">
+            </audio>
+            <input type="range" id="progress" value="0">
+            <div class="button-container">
+                <div><i class="fa-solid fa-backward"></i></div>
+                <div id="play-button"><i class="fa-solid fa-play"></i></div>
+                <div><i class="fa-solid fa-forward"></i></div>
+                
+            </div>
+        </div>
+        
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
